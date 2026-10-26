@@ -1,0 +1,149 @@
+[
+  {
+    "id": "cola",
+    "match": [
+      "coke",
+      "cola",
+      "pepsi",
+      "dr pepper",
+      "root beer",
+      "soda"
+    ],
+    "type": "flag",
+    "points": 3,
+    "note": {
+      "en": "Dark colas have phosphoric acid added. Studies have linked drinking two or more a day to a higher risk of kidney disease.",
+      "es": "Los refrescos de cola tienen ácido fosfórico añadido. Algunos estudios relacionan tomar dos o más al día con más riesgo de enfermedad renal."
+    }
+  },
+  {
+    "id": "energy",
+    "match": [
+      "energy drink",
+      "red bull",
+      "monster",
+      "bang",
+      "celsius"
+    ],
+    "type": "flag",
+    "points": 3,
+    "note": {
+      "en": "Energy drinks have a lot of caffeine and sugar. Drinking them often has been linked to kidney strain.",
+      "es": "Las bebidas energéticas tienen mucha cafeína y azúcar. Tomarlas seguido se ha relacionado con daño renal."
+    }
+  },
+  {
+    "id": "processed",
+    "match": [
+      "bacon",
+      "ham",
+      "hot dog",
+      "sausage",
+      "salami",
+      "pepperoni",
+      "deli",
+      "bologna",
+      "jerky",
+      "spam",
+      "lunch meat",
+      "nuggets"
+    ],
+    "type": "flag",
+    "points": 2,
+    "note": {
+      "en": "Processed meat is usually salted and often has phosphate added to keep it moist.",
+      "es": "La carne procesada suele llevar sal y muchas veces fosfato añadido para mantenerla jugosa."
+    }
+  },
+  {
+    "id": "salty",
+    "match": [
+      "ramen",
+      "instant noodle",
+      "cup noodle",
+      "canned soup",
+      "pickle",
+      "soy sauce",
+      "kimchi",
+      "olives",
+      "chips",
+      "pretzels"
+    ],
+    "type": "flag",
+    "points": 2,
+    "note": {
+      "en": "This is one of the saltier foods. A smaller portion, or half the seasoning packet, cuts the sodium a lot.",
+      "es": "Es de los alimentos más salados. Una porción más pequeña, o la mitad del sobre de sazón, reduce mucho el sodio."
+    }
+  },
+  {
+    "id": "cheese",
+    "match": [
+      "american cheese",
+      "processed cheese",
+      "cheese sauce",
+      "velveeta",
+      "nacho"
+    ],
+    "type": "flag",
+    "points": 1,
+    "note": {
+      "en": "Processed cheese uses phosphate salts to stay smooth. Regular cheese has less added phosphorus.",
+      "es": "El queso procesado usa sales de fosfato para estar cremoso. El queso normal tiene menos fósforo añadido."
+    }
+  },
+  {
+    "id": "fastfood",
+    "match": [
+      "fries",
+      "pizza",
+      "burger",
+      "fried chicken",
+      "taco bell",
+      "fast food",
+      "burrito",
+      "mcdonald"
+    ],
+    "type": "flag",
+    "points": 1,
+    "note": {
+      "en": "Restaurant and fast food portions often have half a day's sodium or more.",
+      "es": "Las porciones de restaurante y comida rápida suelen tener la mitad del sodio del día o más."
+    }
+  },
+  {
+    "id": "sugary",
+    "match": [
+      "boba",
+      "bubble tea",
+      "milk tea",
+      "lemonade",
+      "sweet tea",
+      "juice",
+      "frappuccino",
+      "milkshake",
+      "slushie"
+    ],
+    "type": "flag",
+    "points": 1,
+    "note": {
+      "en": "Sugary drinks raise the risk of type 2 diabetes, which is the most common cause of kidney failure.",
+      "es": "Las bebidas azucaradas aumentan el riesgo de diabetes tipo 2, la causa más común de insuficiencia renal."
+    }
+  },
+  {
+    "id": "water",
+    "match": [
+      "water",
+      "sparkling water",
+      "unsweetened tea",
+      "green tea"
+    ],
+    "type": "good",
+    "points": 0,
+    "note": {
+      "en": "Water helps your kidneys clear waste and lowers the chance of kidney stones.",
+      "es": "El agua ayuda a los riñones a eliminar desechos y reduce la probabilidad de cálculos."
+    }
+  }
+]

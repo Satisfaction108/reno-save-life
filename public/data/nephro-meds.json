@@ -1,0 +1,174 @@
+{
+  "groups": [
+    {
+      "id": "nsaid",
+      "level": "caution",
+      "name": "NSAID pain reliever",
+      "ingredients": ["ibuprofen", "naproxen", "diclofenac", "celecoxib", "ketorolac", "meloxicam", "indomethacin", "ketoprofen", "etodolac", "nabumetone", "piroxicam", "sulindac", "oxaprozin", "flurbiprofen", "mefenamic acid"],
+      "summary": "NSAIDs reduce blood flow to the kidneys. Regular or high-dose use can cause kidney injury, especially with dehydration, older age, heart failure or existing kidney disease. The National Kidney Foundation advises people with CKD to avoid them.",
+      "ask": "If you use this often, ask your doctor whether a different pain option is safer for your kidneys."
+    },
+    {
+      "id": "aspirin",
+      "level": "monitor",
+      "name": "Aspirin",
+      "ingredients": ["aspirin"],
+      "summary": "Low-dose aspirin prescribed for heart protection is generally considered acceptable. High doses used for pain behave like other NSAIDs and can strain the kidneys.",
+      "ask": "Ask your doctor whether your aspirin dose is right for your kidney health."
+    },
+    {
+      "id": "lithium",
+      "level": "caution",
+      "name": "Lithium",
+      "ingredients": ["lithium", "lithium carbonate", "lithium citrate"],
+      "summary": "Long-term lithium use can affect kidney function. Doctors check kidney blood tests regularly while you take it.",
+      "ask": "Keep up with the blood tests your doctor orders. Never stop lithium on your own."
+    },
+    {
+      "id": "aminoglycoside",
+      "level": "caution",
+      "name": "Aminoglycoside or similar antibiotic",
+      "ingredients": ["gentamicin", "tobramycin", "amikacin", "streptomycin", "neomycin", "vancomycin", "polymyxin b", "colistin", "amphotericin b"],
+      "summary": "These antibiotics are known to be hard on the kidneys. They are usually given in a hospital, with drug levels and kidney function monitored.",
+      "ask": "Make sure your care team knows about any kidney concerns before treatment."
+    },
+    {
+      "id": "ppi",
+      "level": "monitor",
+      "name": "Proton pump inhibitor (acid reducer)",
+      "ingredients": ["omeprazole", "esomeprazole", "pantoprazole", "lansoprazole", "rabeprazole", "dexlansoprazole"],
+      "summary": "Long-term use of these acid reducers has been linked in studies to a higher risk of kidney disease. Short courses are generally considered low risk.",
+      "ask": "If you've taken this for months or years, ask your doctor whether you still need it."
+    },
+    {
+      "id": "antiviral",
+      "level": "monitor",
+      "name": "Antiviral",
+      "ingredients": ["tenofovir", "tenofovir disoproxil", "acyclovir", "valacyclovir", "foscarnet", "cidofovir"],
+      "summary": "Some antivirals can affect the kidneys, especially at high doses or with dehydration. Doctors often adjust the dose based on kidney function.",
+      "ask": "Drink enough water and make sure your doctor knows your latest kidney test results."
+    },
+    {
+      "id": "immuno",
+      "level": "monitor",
+      "name": "Immune-suppressing or chemotherapy medicine",
+      "ingredients": ["cyclosporine", "tacrolimus", "methotrexate", "cisplatin", "ifosfamide", "pemetrexed"],
+      "summary": "These medicines can affect kidney function, so kidney blood tests are part of routine monitoring.",
+      "ask": "Keep up with scheduled lab tests and report any swelling or changes in urination."
+    },
+    {
+      "id": "metformin",
+      "level": "monitor",
+      "name": "Metformin (diabetes)",
+      "ingredients": ["metformin"],
+      "summary": "Metformin does not damage the kidneys, and controlling diabetes protects them. Because the kidneys clear metformin, the dose may need to change if kidney function drops.",
+      "ask": "Ask your doctor to check your eGFR at least once a year while you take metformin."
+    },
+    {
+      "id": "diuretic",
+      "level": "monitor",
+      "name": "Diuretic (water pill)",
+      "ingredients": ["furosemide", "hydrochlorothiazide", "chlorthalidone", "torsemide", "bumetanide", "spironolactone", "metolazone", "indapamide", "triamterene"],
+      "summary": "Diuretics help control blood pressure and swelling. They can cause dehydration or changes in potassium, so doctors check blood tests from time to time.",
+      "ask": "Tell your doctor if you feel dizzy, very thirsty, or are sick with vomiting or diarrhea."
+    },
+    {
+      "id": "bactrim",
+      "level": "monitor",
+      "name": "Trimethoprim / sulfamethoxazole",
+      "ingredients": ["trimethoprim", "sulfamethoxazole"],
+      "summary": "This antibiotic can raise potassium and creatinine levels, and the dose may be lowered for people with reduced kidney function.",
+      "ask": "Drink plenty of fluids and tell your prescriber about any kidney concerns."
+    },
+    {
+      "id": "bisphosphonate",
+      "level": "monitor",
+      "name": "IV bone medicine",
+      "ingredients": ["zoledronic acid", "pamidronate"],
+      "summary": "Intravenous bone-strengthening medicines can affect the kidneys, so kidney function is checked before each dose.",
+      "ask": "Make sure kidney tests are done before your infusion."
+    },
+    {
+      "id": "phosphate-laxative",
+      "level": "caution",
+      "name": "Sodium phosphate laxative",
+      "ingredients": ["sodium phosphate", "sodium phosphate, dibasic", "sodium phosphate, monobasic"],
+      "summary": "Sodium phosphate bowel preps and enemas have caused serious kidney injury (acute phosphate nephropathy), and the FDA has warned about them.",
+      "ask": "Ask your doctor about a different bowel prep if you have any kidney risk factors."
+    },
+    {
+      "id": "ace",
+      "level": "protect",
+      "name": "ACE inhibitor (blood pressure)",
+      "ingredients": ["lisinopril", "enalapril", "ramipril", "benazepril", "captopril", "quinapril", "fosinopril", "perindopril", "trandolapril", "moexipril"],
+      "summary": "ACE inhibitors are often prescribed to protect the kidneys, especially for people with diabetes or protein in the urine. They can raise potassium, so doctors check blood tests.",
+      "ask": "Keep taking it as prescribed and keep up with your lab tests."
+    },
+    {
+      "id": "arb",
+      "level": "protect",
+      "name": "ARB (blood pressure)",
+      "ingredients": ["losartan", "valsartan", "irbesartan", "olmesartan", "telmisartan", "candesartan", "azilsartan", "eprosartan"],
+      "summary": "ARBs are often prescribed to slow kidney damage from diabetes and high blood pressure. They can raise potassium, so doctors monitor blood tests.",
+      "ask": "Keep taking it as prescribed and keep up with your lab tests."
+    },
+    {
+      "id": "sglt2",
+      "level": "protect",
+      "name": "SGLT2 inhibitor",
+      "ingredients": ["empagliflozin", "dapagliflozin", "canagliflozin", "ertugliflozin", "sotagliflozin"],
+      "summary": "Large clinical trials showed these medicines slow the decline of kidney function in many people with CKD, with or without diabetes.",
+      "ask": "Stay well hydrated and follow your doctor's guidance on sick days."
+    },
+    {
+      "id": "mra",
+      "level": "protect",
+      "name": "Finerenone",
+      "ingredients": ["finerenone"],
+      "summary": "Finerenone is approved to lower the risk of kidney decline in adults with CKD and type 2 diabetes.",
+      "ask": "Your doctor will check potassium levels while you take it."
+    },
+    {
+      "id": "glp1",
+      "level": "protect",
+      "name": "GLP-1 medicine",
+      "ingredients": ["semaglutide"],
+      "summary": "In a large trial of people with type 2 diabetes and CKD, semaglutide lowered the risk of serious kidney outcomes.",
+      "ask": "Keep taking it as prescribed and report severe nausea or vomiting, which can dehydrate you."
+    }
+  ],
+  "supplements": [
+    {
+      "id": "aristolochic",
+      "level": "caution",
+      "name": "Aristolochic acid herbs",
+      "keywords": ["aristolochia", "aristolochic", "guang fang ji", "birthwort", "snakeroot"],
+      "summary": "Herbs containing aristolochic acid cause severe kidney damage and cancer. The FDA warns consumers not to use them.",
+      "ask": "Stop and talk to a doctor if any product you use lists these ingredients."
+    },
+    {
+      "id": "creatine",
+      "level": "monitor",
+      "name": "Creatine supplement",
+      "keywords": ["creatine"],
+      "summary": "Creatine raises blood creatinine, which can make kidney tests look worse. It is not recommended for people with kidney disease.",
+      "ask": "Tell your doctor you take creatine before any kidney blood test."
+    },
+    {
+      "id": "vitc",
+      "level": "monitor",
+      "name": "High-dose vitamin C",
+      "keywords": ["ascorbic acid", "vitamin c"],
+      "summary": "Very high doses of vitamin C can increase oxalate and the risk of kidney stones.",
+      "ask": "Stick to recommended amounts unless your doctor advises otherwise."
+    },
+    {
+      "id": "licorice",
+      "level": "monitor",
+      "name": "Licorice root",
+      "keywords": ["licorice", "glycyrrhiza", "glycyrrhizin"],
+      "summary": "Large amounts of real licorice can raise blood pressure and lower potassium.",
+      "ask": "Avoid large amounts if you have high blood pressure or kidney concerns."
+    }
+  ]
+}

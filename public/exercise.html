@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise · RENO Save Life</title>
+  <meta name="description" content="RENO Save Life is a kidney health check-up for the Bay Area and beyond.">
+  <meta name="theme-color" content="#1e5f5b">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{if(localStorage.getItem("reno.theme")==='"dark"')document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body data-page="exercise">
+  <div id="site-header"></div>
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page-head">
+        <div>
+          <p class="eyebrow"><span data-i18n="step.label">Step</span> 2 / 6</p>
+          <h1 data-i18n="exercise.title">How active have you been this week?</h1>
+        </div>
+        <p data-i18n="exercise.lede">Log each workout, walk or sport. Regular activity keeps blood pressure and blood sugar down, and those are the two main causes of kidney disease. Adults should aim for 150 minutes a week, and kids and teens for 60 minutes a day.</p>
+      </header>
+      <div class="page-note" data-saved-note="compact"></div>
+      <div class="exercise-grid">
+        <div class="exercise-side">
+          <div class="card">
+            <form id="exercise-form" class="stack">
+              <div class="field">
+                <label for="ex-activity" class="field-label" data-i18n="exercise.activity">Activity</label>
+                <select id="ex-activity" required></select>
+              </div>
+              <div class="ex-row">
+                <div class="field">
+                  <label for="ex-minutes" class="field-label" data-i18n="exercise.minutes">Minutes</label>
+                  <input id="ex-minutes" type="number" min="5" max="300" step="5" value="30" required>
+                </div>
+                <div class="field">
+                  <label for="ex-day" class="field-label" data-i18n="exercise.day">Day</label>
+                  <select id="ex-day"></select>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="img/icons.svg#i-plus"/></svg><span data-i18n="exercise.log">Log activity</span></button>
+            </form>
+            <div class="activity-info" id="activity-info"></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><h3 data-i18n="exercise.recent">Recent activity</h3></div>
+            <ul class="log-list" id="exercise-log"></ul>
+          </div>
+        </div>
+        <div class="exercise-side">
+          <div class="card">
+            <div class="card-head">
+              <h3 data-i18n="exercise.week">This week</h3>
+              <span class="tag" id="week-total">0 / 150 min</span>
+            </div>
+            <div class="week-bars" id="week-bars"></div>
+            <div class="week-progress" id="week-progress" role="progressbar" aria-valuemin="0"><div></div></div>
+            <p class="fine" data-i18n="exercise.vigorousNote">Vigorous activity counts double, following CDC guidelines.</p>
+            <div class="week-stats" id="week-stats"></div>
+          </div>
+          <div class="card" id="week-insight"></div>
+          <div class="card caution-card">
+            <h3><svg aria-hidden="true"><use href="img/icons.svg#i-alert"/></svg><span data-i18n="exercise.cautionTitle">A few safety tips</span></h3>
+            <ul class="plain-list">
+              <li data-i18n="exercise.c1">Drink water before, during and after exercise. Being dehydrated is hard on the kidneys.</li>
+              <li data-i18n="exercise.c2">Build up slowly. Extreme workouts you aren't trained for can break down muscle, and that can injure the kidneys.</li>
+              <li data-i18n="exercise.c3">Check with a doctor before using creatine, protein powders or pre-workout supplements.</li>
+              <li data-i18n="exercise.c4">Try not to rely on ibuprofen for sore muscles. It reduces blood flow to the kidneys.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="step-nav"></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

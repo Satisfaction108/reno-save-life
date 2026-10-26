@@ -1,0 +1,17 @@
+{
+  "name": "reno-save-life",
+  "version": "1.0.0",
+  "description": "RENO Save Life: kidney health awareness and daily tracking for the Bay Area and beyond",
+  "main": "dev-server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env dev-server.js",
+    "start": "node --env-file-if-exists=.env dev-server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "express": "^4.21.2"
+  }
+}

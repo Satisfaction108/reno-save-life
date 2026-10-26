@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicines · RENO Save Life</title>
+  <meta name="description" content="RENO Save Life is a kidney health check-up for the Bay Area and beyond.">
+  <meta name="theme-color" content="#1e5f5b">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{if(localStorage.getItem("reno.theme")==='"dark"')document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body data-page="medication">
+  <div id="site-header"></div>
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page-head">
+        <div>
+          <p class="eyebrow"><span data-i18n="step.label">Step</span> 3 / 6</p>
+          <h1 data-i18n="med.title">Which medicines do you take?</h1>
+        </div>
+        <p data-i18n="med.lede">Include prescriptions, over-the-counter painkillers and supplements. We check each one against its FDA label and kidney safety guidance. We'll never tell you to start or stop a medicine.</p>
+      </header>
+      <div class="med-grid">
+        <div class="card">
+          <label class="switch-row">
+            <input type="checkbox" id="med-none">
+            <span class="switch" aria-hidden="true"></span>
+            <span data-i18n="med.none">I don't take any medicines</span>
+          </label>
+          <div id="med-entry">
+            <form id="med-form" autocomplete="off">
+              <label for="med-name" class="field-label" data-i18n="med.label">Medicine name</label>
+              <div class="input-row">
+                <input id="med-name" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="med-suggest" data-i18n-placeholder="med.placeholder" placeholder="For example Advil, lisinopril or metformin">
+                <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="img/icons.svg#i-plus"/></svg><span data-i18n="med.add">Add</span></button>
+                <ul class="suggest" id="med-suggest" role="listbox" hidden></ul>
+              </div>
+            </form>
+            <div class="divider"><span data-i18n="med.or">or</span></div>
+            <label class="upload-zone" for="med-photo">
+              <svg aria-hidden="true"><use href="img/icons.svg#i-camera"/></svg>
+              <span><strong data-i18n="med.photo">Scan a prescription label</strong><small data-i18n="med.photoHint">Take a photo or choose an image. The text is read on your device and the photo is never uploaded.</small></span>
+              <input type="file" id="med-photo" accept="image/*" capture="environment">
+            </label>
+            <p class="hint"><span data-i18n="med.noRx">No prescription handy?</span> <button type="button" class="link-btn" id="med-sample" data-i18n="med.sample">Try a sample one</button></p>
+            <img id="ocr-preview" class="ocr-preview" alt="" hidden>
+            <div id="ocr-status" class="ocr-status" hidden></div>
+            <label class="check-row">
+              <input type="checkbox" id="med-remember">
+              <span data-i18n="med.remember">Keep my list after I close the browser</span>
+            </label>
+            <p class="fine" data-i18n="med.rememberHint">If this is off, your list is only kept until you close this tab.</p>
+          </div>
+        </div>
+        <div class="med-output">
+          <ul class="med-list" id="med-list"></ul>
+          <div class="card empty-state" id="med-empty"><svg aria-hidden="true"><use href="img/icons.svg#i-pill"/></svg><p data-i18n="med.empty">Medicines you add will show up here.</p></div>
+          <p class="fine" data-i18n="med.disclaimer">This is general information. Talk to your doctor or pharmacist before changing how you take any medicine.</p>
+        </div>
+      </div>
+      <div id="step-nav"></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

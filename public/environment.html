@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your area · RENO Save Life</title>
+  <meta name="description" content="RENO Save Life is a kidney health check-up for the Bay Area and beyond.">
+  <meta name="theme-color" content="#1e5f5b">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{if(localStorage.getItem("reno.theme")==='"dark"')document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body data-page="environment">
+  <div id="site-header"></div>
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page-head">
+        <div>
+          <p class="eyebrow"><span data-i18n="step.label">Step</span> 4 / 6</p>
+          <h1 data-i18n="env.title">Where do you live?</h1>
+        </div>
+        <p data-i18n="env.lede">Air pollution, heat and local health trends can all affect kidney risk. Enter your ZIP code to see current conditions and CDC data for your area.</p>
+      </header>
+      <form id="env-form" class="env-form card" autocomplete="off">
+        <label for="env-zip" class="field-label" data-i18n="env.label">ZIP code</label>
+        <div class="input-row">
+          <span class="input-icon"><svg aria-hidden="true"><use href="img/icons.svg#i-pin"/></svg><input id="env-zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="94103" required></span>
+          <button class="btn btn-primary" type="submit" data-i18n="env.submit">Look up my area</button>
+        </div>
+      </form>
+      <div class="env-results" id="env-results" aria-live="polite"></div>
+      <div class="env-factors">
+        <article class="factor"><svg aria-hidden="true"><use href="img/icons.svg#i-wind"/></svg><h3 data-i18n="env.f1t">Air pollution</h3><p data-i18n="env.f1">Fine particles from traffic and wildfire smoke get into the blood. A study of 2.5 million US veterans found more kidney disease where this pollution was higher.</p></article>
+        <article class="factor"><svg aria-hidden="true"><use href="img/icons.svg#i-thermo"/></svg><h3 data-i18n="env.f2t">Heat</h3><p data-i18n="env.f2">Hot days make it easy to get dehydrated, and repeated dehydration can hurt the kidneys. People who work outside are most at risk.</p></article>
+        <article class="factor"><svg aria-hidden="true"><use href="img/icons.svg#i-drop"/></svg><h3 data-i18n="env.f3t">Water</h3><p data-i18n="env.f3">Lead from old pipes and other contaminants can harm the kidneys over time. Your water company publishes a yearly report.</p><a href="https://www.epa.gov/ccr/ccr-information-consumers" target="_blank" rel="noopener" data-i18n="env.f3link">Find your water report</a></article>
+        <article class="factor"><svg aria-hidden="true"><use href="img/icons.svg#i-burger"/></svg><h3 data-i18n="env.f4t">Food nearby</h3><p data-i18n="env.f4">Areas with more fast food and fewer grocery stores make it harder to avoid salty, processed meals.</p></article>
+        <article class="factor"><svg aria-hidden="true"><use href="img/icons.svg#i-chair"/></svg><h3 data-i18n="env.f5t">Places to move</h3><p data-i18n="env.f5">Without safe sidewalks or parks nearby, people tend to move less, which raises blood pressure and diabetes risk.</p></article>
+      </div>
+      <div id="step-nav"></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

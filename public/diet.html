@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diet · RENO Save Life</title>
+  <meta name="description" content="RENO Save Life is a kidney health check-up for the Bay Area and beyond.">
+  <meta name="theme-color" content="#1e5f5b">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{if(localStorage.getItem("reno.theme")==='"dark"')document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body data-page="diet">
+  <div id="site-header"></div>
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page-head">
+        <div>
+          <p class="eyebrow"><span data-i18n="step.label">Step</span> 1 / 6</p>
+          <h1 data-i18n="diet.title">What did you eat today?</h1>
+        </div>
+        <p data-i18n="diet.lede">Add foods for each meal. We look them up in the USDA food database and check sodium, phosphorus, potassium and protein, which are the nutrients your kidneys have to balance.</p>
+      </header>
+      <div class="page-note" data-saved-note="compact"></div>
+      <div class="diet-grid">
+        <div class="diet-left">
+          <div class="card" id="diet-profile"></div>
+          <div class="card">
+            <form id="diet-form" autocomplete="off">
+              <span class="field-label" id="meal-label" data-i18n="diet.mealLabel">Which meal?</span>
+              <div class="seg meal-pick" role="radiogroup" aria-labelledby="meal-label" id="meal-pick"></div>
+              <label for="diet-text" class="field-label" data-i18n="diet.label">What did you have?</label>
+              <div class="input-row">
+                <input id="diet-text" type="text" data-i18n-placeholder="diet.placeholder" placeholder="bread, pasta, coke" required>
+                <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="img/icons.svg#i-plus"/></svg><span data-i18n="diet.submit">Add</span></button>
+              </div>
+              <p class="hint"><span data-i18n="diet.hint">Separate foods with commas, for example</span> <button type="button" class="link-btn" id="diet-example">bread, pasta, coke</button></p>
+            </form>
+          </div>
+          <div class="card" id="diet-totals"></div>
+          <div class="card">
+            <div class="card-head">
+              <h3 data-i18n="diet.history">Sodium, last 7 days</h3>
+              <button type="button" class="link-btn" id="diet-clear" data-i18n="diet.clear">Clear today</button>
+            </div>
+            <div id="diet-chart" class="mini-chart" role="img" aria-label="Daily sodium for the last seven days"></div>
+          </div>
+          <div class="card comeback" id="diet-comeback" hidden></div>
+          <details class="card key">
+            <summary><span data-i18n="diet.keyTitle">What these nutrients mean</span><svg aria-hidden="true"><use href="img/icons.svg#i-chevron"/></svg></summary>
+            <div class="nutrient-key">
+              <div class="nk"><span class="nk-swatch bar-na"></span><div><strong data-i18n="diet.sodium">Sodium</strong><p data-i18n="diet.sodiumWhy">Too much raises blood pressure, which damages the kidneys' filters over time. Adults should stay under 2,300 mg a day.</p></div></div>
+              <div class="nk"><span class="nk-swatch bar-ph"></span><div><strong data-i18n="diet.phosphorus">Phosphorus</strong><p data-i18n="diet.phosphorusWhy">Builds up in the blood when kidneys weaken. The phosphorus added to sodas and processed food is absorbed more easily than the kind in whole foods.</p></div></div>
+              <div class="nk"><span class="nk-swatch bar-k"></span><div><strong data-i18n="diet.potassium">Potassium</strong><p data-i18n="diet.potassiumWhy">Good for most people. It only becomes a problem when the kidneys can't remove the extra.</p></div></div>
+              <div class="nk"><span class="nk-swatch bar-pr"></span><div><strong data-i18n="diet.protein">Protein</strong><p data-i18n="diet.proteinWhy">Your body needs it, but very large amounts give the kidneys more work. People with CKD are often given a daily target.</p></div></div>
+            </div>
+          </details>
+        </div>
+        <div class="card" id="diet-results"></div>
+      </div>
+      <div id="step-nav"></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
