@@ -1,6 +1,7 @@
 import { store, icon, clearAll } from "../storage.js";
 import { t } from "../i18n.js";
 import { STEPS } from "../layout.js";
+import { installCardHtml } from "../install.js";
 
 // CDC PLACES 2023, self-reported
 const COUNTIES = [
@@ -43,9 +44,16 @@ function renderActions() {
     <a class="btn ${hasScore ? "btn-ghost" : "btn-primary"} btn-large" href="${hasScore ? "diet.html" : resumeHref}"><span>${hasScore ? t({ en: "Log today's meals", es: "Registrar las comidas de hoy" }) : t({ en: "Continue my check-up", es: "Continuar mi chequeo" })}</span>${hasScore ? "" : icon("arrow")}</a>`;
 }
 
+function renderInstall() {
+  const mount = document.getElementById("install-card");
+  if (mount) mount.innerHTML = installCardHtml();
+}
+
 export function init() {
   renderGap();
   renderActions();
+  renderInstall();
+  document.addEventListener("reno:installable", renderInstall);
   document.getElementById("erase-data").addEventListener("click", () => {
     const sure = window.confirm(t({ en: "Erase all meals, workouts, medicines and answers saved on this device?", es: "¿Borrar todas las comidas, ejercicios, medicamentos y respuestas guardadas en este dispositivo?" }));
     if (!sure) return;
@@ -55,5 +63,6 @@ export function init() {
   document.addEventListener("langchange", () => {
     renderGap();
     renderActions();
+    renderInstall();
   });
 }

@@ -39,6 +39,10 @@ The Medicines page has a **Try a sample one** button, which runs the label scann
 
 Entries are saved in the browser's `localStorage`, so they are still there when someone comes back on the same device.
 
+## Phone app
+
+RENO installs as an app on Android and iPhone straight from the website. It uses a web app manifest, a service worker that keeps pages working offline, and app icons. On a phone, visitors are offered **Install app** or **Keep using the website**. See [PUBLISHING.md](PUBLISHING.md) for Google Play and App Store steps.
+
 ## Privacy
 
 - No accounts, no analytics, no tracking.
@@ -96,7 +100,10 @@ public/js/score.js        Works out the score out of 100
 public/js/pages/          One script per page
 public/js/storage.js      Browser storage helpers
 public/js/i18n.js         English and Spanish
-public/img/               Logo and icon sprite
+public/img/               Logo, app icons and icon sprite
+public/manifest.webmanifest  App name, icons and colors for installing
+public/sw.js              Service worker for offline use
+public/js/install.js      Install prompt for Android and iPhone
 public/data/              Medicine cautions, exercises, food flags, Spanish text
 ```
 

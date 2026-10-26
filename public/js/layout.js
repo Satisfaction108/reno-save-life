@@ -169,7 +169,7 @@ function renderFooter() {
           </ul>
         </div>
       </div>
-      <div class="container footer-base"><span>&copy; 2026 RENO Save Life</span><span>${t({ en: "Not a substitute for professional care", es: "No sustituye la atención profesional" })}</span></div>
+      <div class="container footer-base"><span>&copy; 2026 RENO Save Life &middot; <button type="button" class="link-btn" data-open-install>${t({ en: "Get the app", es: "Descargar la app" })}</button></span><span>${t({ en: "Not a substitute for professional care", es: "No sustituye la atención profesional" })}</span></div>
     </footer>`;
 }
 

@@ -1,3 +1,4 @@
+import { registerServiceWorker, maybeOfferInstall, openSheet } from "./install.js";
 import { store } from "./storage.js";
 import { initI18n } from "./i18n.js";
 import { renderLayout, markReady } from "./layout.js";
@@ -25,6 +26,14 @@ async function start() {
     await module.init();
   }
   markReady();
+  maybeOfferInstall();
 }
+
+// Any "get the app" button
+document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-open-install]")) openSheet();
+});
+
+registerServiceWorker();
 
 start();
