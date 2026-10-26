@@ -45,57 +45,49 @@ Entries are saved in the browser's `localStorage`, so they are still there when 
 - Diet, exercise and plan answers are stored only in the browser (`localStorage`).
 - The medicine list is kept only until the tab closes, unless the user ticks "Keep my list after I close the browser".
 - Prescription photos are read with Tesseract.js **inside the browser**. The image is never uploaded.
-- The only request that goes through our server is the food lookup, so the USDA API key stays secret.
+- Food lookups go through our own function, so the USDA API key stays secret.
 
 ## Tech stack
 
 - Plain HTML, CSS and JavaScript (ES modules), with no framework or build step
-- A small Node.js + Express server (`server.js`) that serves the site and proxies USDA FoodData Central
-- Hosted on Render
+- Three small serverless functions: food lookup (USDA FoodData Central), medicine name search and prescription word matching (NIH RxNorm names)
+- Hosted on Vercel: static files from `public/`, API routes as serverless functions in `api/`
 
 ## Run it locally
 
 1. Install [Node.js](https://nodejs.org) 20 or newer.
-2. Get a free USDA API key at https://fdc.nal.usda.gov/api-key-signup (it arrives by email in about a minute).
-3. In this folder, run:
+2. Get a free USDA API key at https://fdc.nal.usda.gov/api-key-signup.
+3. Copy `.env.example` to `.env` and paste your key after `USDA_API_KEY=`.
+4. Install and start:
 
 ```bash
 npm install
 ```
 
 ```bash
-cp .env.example .env
-```
-
-4. Open `.env` and paste your key after `USDA_API_KEY=`.
-5. Start the server:
-
-```bash
 npm run dev
 ```
 
-6. Open http://localhost:3000.
+5. Open http://localhost:3000.
 
-Without a key, the app uses USDA's shared `DEMO_KEY`, which allows only about 10 food lookups per hour.
-
-## Deploy to Render (free)
+## Deploy to Vercel (free)
 
 1. Push this folder to a GitHub repository.
-2. On https://render.com, choose **New → Web Service** and connect the repository.
-3. Settings:
-   - **Runtime:** Node
-   - **Build command:** `npm install`
-   - **Start command:** `npm start`
-   - **Instance type:** Free
-4. Under **Environment**, add `USDA_API_KEY` (your key) and `NODE_ENV` = `production`.
-5. Deploy. Your site will be at `https://<your-service-name>.onrender.com`. For example, name the service `renosavelife`.
+2. On https://vercel.com, sign in with GitHub and choose **Add New → Project**, then import the repository.
+3. Leave the settings as they are. `vercel.json` already sets the output folder to `public` and turns off the build step.
+4. Under **Environment Variables**, add `USDA_API_KEY` with your key.
+5. Click **Deploy**. The site will be at `https://<project-name>.vercel.app`.
 
-Render's free web services go to sleep after about 15 minutes without visitors, and the first visit afterward takes 30–60 seconds. Open the site a minute before anyone judges or demos it.
+Every push to the `main` branch redeploys automatically. Vercel doesn't put the site to sleep, so it loads quickly every time.
 
 ## Project structure
 
 ```
-server.js                 Express server, USDA food lookup, medicine name search
+api/                      Vercel functions: food, meds, meds-match
+lib/                      Shared food and medicine search logic
+lib/data/med-names.json   RxNorm medicine names for type-ahead
+dev-server.js             Local server for testing
+vercel.json               Vercel settings
 public/*.html             One page per step, plus home and numbers
 public/css/styles.css     Design tokens, layout, light and dark themes
 public/js/app.js          Loads the right script for each page
