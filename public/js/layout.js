@@ -71,7 +71,7 @@ function renderHeader(page) {
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="RENO Save Life">
-          <img src="img/logo.svg" alt="" width="34" height="34">
+          <img src="img/logo-128.png" alt="" width="42" height="42">
           <span class="brand-text"><strong>RENO</strong><span>Save Life</span></span>
         </a>
         <nav class="primary-nav" id="primary-nav" aria-label="${t({ en: "Main", es: "Principal" })}">${navLinks(page)}</nav>
@@ -147,7 +147,7 @@ function renderFooter() {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="brand" href="index.html"><img src="img/logo.svg" alt="" width="30" height="30"><span class="brand-text"><strong>RENO</strong><span>Save Life</span></span></a>
+          <a class="brand" href="index.html"><img src="img/logo-128.png" alt="" width="38" height="38"><span class="brand-text"><strong>RENO</strong><span>Save Life</span></span></a>
           <p class="footer-note">${t({ en: "Made in the San Francisco Bay Area for the Congressional App Challenge.", es: "Hecho en el Área de la Bahía de San Francisco para el Congressional App Challenge." })}</p>
         </div>
         <div>

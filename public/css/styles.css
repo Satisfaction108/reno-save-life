@@ -110,7 +110,9 @@ a { color: var(--primary); text-underline-offset: 3px; }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; gap: 20px; height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.brand img { width: 34px; height: 34px; }
+.brand img { width: 42px; height: 42px; }
+/* Light tile behind logo in dark mode */
+:root[data-theme="dark"] .brand img { background: #f7f5f0; border-radius: 10px; padding: 3px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
 .brand-text strong { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.04em; }
 .brand-text span { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
