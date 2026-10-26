@@ -106,7 +106,9 @@ function analyze(item, goal) {
   if (levels.potassium === "high") {
     notes.push({ type: "info", text: t({ en: "{mg} mg of potassium. Healthy for most people, but can be too much with advanced CKD.", es: "{mg} mg de potasio. Sano para la mayoría, pero puede ser demasiado con ERC avanzada." }, { mg: formatNumber(values.potassium) }) });
   }
-  if (values.sugar >= 20) {
+  // Whole fruit sugar is fine
+  const wholeFruit = /\b(apples?|bananas?|oranges?|grapes?|berr(y|ies)|mangos?|pears?|peach(es)?|melons?|pineapple|cherr(y|ies)|plums?|kiwi|papaya|fruit)\b/i.test(`${item.query} ${item.match.description}`) && !/juice|syrup|dried|smoothie|candied|pie|cake/i.test(item.match.description);
+  if (values.sugar >= 20 && !wholeFruit) {
     points += 1;
     notes.push({ type: "flag", text: t({ en: "{g} g of sugar.", es: "{g} g de azúcar." }, { g: formatNumber(values.sugar) }) });
   }
